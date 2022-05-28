@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Alignment</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        
+        .container{
+            width:1000px;
+            border: 6px solid green;
+            margin: auto; /* It will take equal margin from both left and right and will come at center*/
+        }
+        .item{
+            background-color: beige;
+            border: 3px solid brown;
+            margin: 10px;
+            padding: 4px;
+            padding-left:10px;
+            border-end-end-radius: 13px;
+        }
+       
+        #fruits{
+            float: left;
+            width: 50%;
+        }
+        #computer{
+            float: left;
+            width: 50%;
+        }
+        #stationary{
+            width:100%;
+            clear: both;
+        }
+        h3{
+            text-align: right;
+        }
+        p{
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p id="first" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident corrupti dolorem id temporibus repellat iste facilis impedit natus magnam, error expedita quaerat eos, sit, obcaecati animi. Aliquid voluptatum architecto odit!</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computers</h3>
+            <p id="second" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident corrupti dolorem id temporibus repellat iste facilis impedit natus magnam, error expedita quaerat eos, sit, obcaecati animi. Aliquid voluptatum architecto odit!</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="third" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident corrupti dolorem id temporibus repellat iste facilis impedit natus magnam, error expedita quaerat eos, sit, obcaecati animi. Aliquid voluptatum architecto odit!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+</head>
+<style>
+    .container{
+        background-color: beige;
+        border: 1px solid brown;
+        height: 700px;
+        padding: 5px;
+        
+        /* To make grid layout we have to make the container as display:grid */
+        /* Also note that here display:grid means block grid(means container will be block element) 
+        But if we want a grid container but we want to make it as inline element then we can use display:inline-grid;*/
+        display: grid;
+        /* 
+        After making the container as grid container , by default it has 1 column and no. of rows = no. of elements
+
+        To give manully the no. of columns and no. of rows: we have grid-template-rows and grid-template-column properties
+        */
+        /* Suppose we want three columns of 133px 133px 133px , Then*/
+        /* grid-template-columns: 133px 133px 133px;  */
+        /* And suppose we want three rows of 133px 133px 133px ,  Then*/
+        /* grid-template-rows: 133px 133px 133px;  */
+
+        /* But It is recommended that for grid-template-columns and grid-template-rows we should use repeat() function and fr units(fr means 
+            fraction of available width) */
+
+        /* grid-template-columns: 1fr 2fr 1fr; It will divide the available grid-container width into 3 pcolumns in the ratio 1:2:1 */
+        grid-template-columns: repeat(3, 1fr); /*It will divide the available width of the grid-container into 1:1:1 ratio*/
+        grid-template-rows: repeat(3, 1fr); /*It will divide the available width of the grid-container into 1:1:1 ratio*/
+
+        /* To apply specific gap between the rows we use row-gap property */
+        row-gap: 20px;
+        
+        /* To apply specific gap between the columns we use column-gap property */
+        column-gap: 5px;
+
+        /* For horizontally aligning items we use justify-items property */
+        justify-items: start; /*This will justify the item to appear at the start of a particular cell (This property can be visulized when the 
+                                    width of the item inside the cell less than the cell width inside grid container)
+                                    Other values for justify-items are : center, end*/ 
+
+        /* Justify-items is a property for grid container */
+        /* But suppose we want to apply this property for one single grid-item of the grid  container
+        Then we need to apply justify-self property in the grid-item(e.g. #item1)*/
+
+
+        /* For vertically aligning items we use align-items property */
+        /* align-items: center; */
+
+        /* To align items vertically as well as horizontally at center, we have property place-items:center; */
+        place-items: center; 
+        /* And applying this for only one grid-element : property is -> place-self: */
+
+    }
+
+    /* Now let's see how to span cells of grid layout */
+    #item1{
+        grid-column-start: 1; /*here 1 is the line no. (see line no. in introduction to grid layout)*/
+        grid-column-end: 3; /*here 3 is the line no.*/
+        /* So start=1 and end=3 will span first two cells */
+
+        /* After spanning the first cell till line no. =3, don't think that 1st cell will overlap over second cell and First cell will
+            hide the second cell, It's not like that, instead of that, the cells will shift by position , all the grid elements will be present*/
+
+            
+    }
+    .item
+    {
+        background-color: cyan;
+        border: 2px solid brown;
+        /* width: 122px;
+        height: 122px; */
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item"   id="item1">1</div>
+        <div class="item"   id="item2">2</div>
+        <span class="item"  id="item3">3</span>
+        <span class="item"  id="item4">4</span>
+        <div class="item"   id="item5">5</div>
+        <span class="item"  id="item6">6</span>
+        <span class="item"  id="item7">7</span>
+        <div class="item"   id="item8">8</div>
+    </div>
+</body>
+</html>

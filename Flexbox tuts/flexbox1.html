@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox1</title>
+    
+    <style>
+        /* Initially the div elements inside the container are are block level , so they will appear line by line
+        But, after making the container as flex, it becomes a flex-container(or flexbox) and the items inside it becomes the flexitems
+
+        Now we can apply some properties to the flex-container and spme properties to the flex-items (flex-container and flex-items have 
+        their own properties)
+
+         */
+         .container{
+            border: 2px solid green;
+            padding: 2px;
+            height: 60vh;
+
+            display: flex; /*Now the container becomes flexbox*/
+            /* After making the container as flexbox , the flex-items appears horizontally because the default flex-direction is row */
+            /* flex-direction: row; /*default value*/
+            /* flex-direction: column;  */
+
+            /* by default the elements are aligned top-left because the default value of justify content is flex-start(which makes 
+            the flex-items to appear from the start of the flexbox- means from left)*/
+
+            /* to make the elements to appear at center in the row we do justify-content: center; */
+
+            /* justify-content: center;  */
+            
+            /* Other values of justify-content are flex-end(make the elements to appear at the end of the flexbox- means right side)
+            space-evenly (which gives equal space between the items)
+            space-between (which gives equal space between the elemnts other than the extreme elements) 
+
+            /* Till now we have seen that how to  ake the flex-items to horizontally align at center 
+
+            To align the items vertically at center we use align-items:center; 
+
+            Other values for align items: are same as justify-content i.e. flx start and flex-end
+         
+            */
+            /* align-items:center; */
+
+            flex-wrap: wrap; 
+            /* What flex-wrap does is : when the width of the flex-box becomes lesser than the required width to hold the elemnts 
+            in the same row(or same column) then the elemnts starts to go into the next-row(or next column) - so this property 
+            is useful while making the flexbox responsive  */
+            
+         }
+         /* ----------------------------------------------------------------------- */
+         /* properties of the flex-items */
+         #item1{
+             /* If we want to change the order in which any element is appearing by default use order property 
+             (by default every element has order:0;)*/ 
+             order: 2;
+         }
+         #item2{
+             /* The element which has the least value for order will appear first */
+             order: 1;
+         }
+         #item4{
+            /* If we want any element to have more width than other elements provided the width of the flexbox container is available
+              in extra then we can use flex-grow property for that item*/
+              flex-grow: 2;
+
+              /* If we want any flex-item to shrink more than the other flex-items when we reduce the width of the flexbox then we use flex-shrink
+              property (When the width of the flexbox is reduced below the reqired width then this element will start shrinking 
+              more than the others) // You can see this property active when the flex-wrap property is not present in flexbox
+
+              
+               */
+               flex-shrink:2;
+         }
+         #item3{
+              flex-grow: 2;
+
+              flex-shrink:2;
+         }
+
+         .item{
+            background-color: orangered;
+            margin: 4px;
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">1</div>
+        <div class="item" id="item2">2</div>
+        <div class="item" id="item3">3</div>
+        <div class="item" id="item4">4</div>
+    </div>
+</body>
+</html>

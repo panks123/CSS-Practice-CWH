@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation bar</title>
+    <style>
+        .navbar{
+            background-color: rgb(40, 40, 54);
+            border-radius: 35px;
+        }
+        /* li inside .navbar */
+        .navbar li{
+            float: left;
+            list-style: none;
+            margin: 10px;
+        }
+        .navbar ul{
+            /*  Since after making li items to float it they overflow so we cannot see the background color , so we put overflow: auto*/
+            overflow: auto;
+            padding: 10px;
+            margin-left: 50px;
+        }
+        .navbar a{
+            color: azure;
+            text-decoration: none;
+        }
+        .navbar a:hover{
+            color: green;
+        }
+        .search{
+            margin: 10px;
+            float: right;
+            margin-right: 120px;
+            color: azure;
+        }
+        .navbar button{
+            background-color: rgb(40, 40, 54); 
+            border: 2px solid green;
+            border-radius: 3px;
+        }
+        .navbar button:hover{
+            background-color: rgb(12, 170, 20); 
+            border: 2px solid rgb(27, 66, 27);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Navigation bar</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="https://google.com">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Contact us</a></li>
+                <li><a href="" style="float: right;">About us</a></li>
+                <div class="search">
+                    <input type="text", name="search" placeholder="Search here">
+                    <button><a href="#"> Search</a></button>
+                </div>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

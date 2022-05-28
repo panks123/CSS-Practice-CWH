@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 2rem;  /*2rem means it will take 2 times the size of the html(default is 16px)(2*20=40px)*/ 
+            /* This you can check by inspect in chrome , and go to computed tab */
+            padding: 3rem; /* Now padding will become 3*20=270px;*/
+            /*So it will always be relative to html element*/
+        }
+        #second{
+            font-size: 2.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is a heading</h1>
+        <h1 id="second">This is a heading</h1>
+        <h1 id="third">This is a heading</h1>
+    </div>
+</body>
+</html>

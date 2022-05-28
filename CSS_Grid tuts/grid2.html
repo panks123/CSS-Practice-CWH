@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">      
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: aliceblue;
+        }
+        main{
+            background-color: aqua;
+            width: 90%;
+            margin: 10px auto;
+            display: grid;
+            grid-template-rows: 150px 150px;
+            
+            grid-template-columns: 1fr minmax(250px,500px) 1fr; /*It divides the grid container into 3 columns  in such a way that first and last
+                                                                  /*column takes 1fr and the second column is such that it always mintains a 
+                                                                  max-width of 500px(if we go on increasing the width of the grid container
+                                                                   using responsive using inspect it will maintain the max width of 500px always)
+                                                                    and if if we go on decreasing the width of the grid container then it will 
+                                                                    always maintain the minimum width of  500px*/
+
+            /* grid-template-columns: repeat(auto-fit,minmax(300px,500px)); To make responsive grid auto-fit or auto fill is used */
+            row-gap: 30px;
+            column-gap: 8px;
+
+            /* After spanning some of the grid cells, it may be possible that some of the cells overflow, that is may go to next 
+                row and next columns automatically . To define the structure of the automatically overflown rows*/
+            grid-auto-rows: 200px;
+
+            /* justify-items: center; for horizontally items in a particular cell aligning to center */
+            /* align-items: center; for vertically aligning items in a particular cell to center */
+        
+
+        }
+        #item1{
+            background-color: brown;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        #item2{
+            background-color: navy;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        #item3{
+            background-color: hotpink;
+        }
+        #item4{
+            background-color: orangered;
+        }
+        #item5{
+            background-color: saddlebrown;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="item" id="item1">Item-1</div>
+        <div class="item" id="item2">Item-2</div>
+        <div class="item" id="item3">Item-3</div>
+        <div class="item" id="item4">Item-4</div>
+        <div class="item" id="item5">Item-5</div>
+    </main>
+</body>
+</html>

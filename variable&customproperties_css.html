@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and Custom properties in CSS</title>
+    <style>
+        :root{
+            /* These variables can be used in any CSS block */
+            --danger-color:red;
+            --healthy-color: green;
+        }
+        .container{
+            display: flex;
+        }
+        .box
+        {
+            --box-color: olive; /* A variable property can be define as this */
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            margin: 10px;
+            border: 2px solid var(--box-color); /* We can use the above variable as this*/
+
+            /* Note: If a variable is defined inside a block, then we can use that variable is inside that block only, we can not use outside this block */
+        }
+        p{
+            /* background-color: var(--box-color); -- This value will not be used because it's out of scope */  
+            background-color: var(--healthy-color);
+        }
+        #danger{
+            background-color: var(--danger-color);
+        }
+        #health{
+            background-color: var(--healthy-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+    <section>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus obcaecati maxime magni odit repudiandae vitae sed provident laboriosam. Reiciendis at sint iusto pariatur minus? Suscipit, dolorum ab modi libero ipsam molestias architecto voluptatem necessitatibus provident fugit dignissimos?</p>
+        <ul>
+            <li id="danger">I am dangerous</li>
+            <li id="health">I am healthy</li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            font-size: 9px;
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            font-size: 10em;  /*10em means it will take 10 times the size of the parent(10*9=90px)*/ 
+            /* This you can check by inspect in chrome , and go to computed tab */
+            padding: 3em; /* Now padding will become 3*10*9px=270px;*/
+        }
+    </style>
+</head>
+<body>
+    <!-- <h2>Various ways to achieve responsive design</h2>
+    <ul>
+        <li>Setting up the viewport</li>
+        <li>Use max-width/max-height</li>
+        <li>Using CSS media queries</li>
+        <li>Using rem/vh/vw units over pixel</li>
+    </ul> -->
+    <div class="container">
+        <h1 id="first">This is a heading</h1>
+        <h1 id="second">This is a heading</h1>
+        <h1 id="third">This is a heading</h1>
+    </div>
+</body>
+</html>

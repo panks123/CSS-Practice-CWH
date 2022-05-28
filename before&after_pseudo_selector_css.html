@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before & After Pseudo Selectors</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+        }
+        .navigation{
+            display: flex;
+        }
+        .item{
+            list-style: none;
+            padding: 5px;
+            margin: 5px;
+        }
+        section::before{
+            content: "This is a content";
+        }
+        section{
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            margin: 30px;
+            /* text-align: center; */
+            align-items: center;
+            border: 1px solid orangered;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item" id="item1">Home</li>
+                <li class="item" id="item2">About</li>
+                <li class="item" id="item3">Services</li>
+                <li class="item" id="item4">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Welcome to the coding world</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti porro hic animi nesciunt magni repellat iure vero blanditiis eos minima, obcaecati temporibus, accusamus beatae nisi. Quae beatae doloribus similique voluptas veniam quo, omnis quasi suscipit.</p>
+    </section>
+</body>
+</html>

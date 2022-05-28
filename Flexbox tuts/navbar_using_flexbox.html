@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox- Navbar</title>
+    <style>
+        body{
+            background-color: rgb(216, 187, 168);
+        }
+        .nav-list{
+            background-color: whitesmoke;
+            box-shadow: 0px 0px 10px coral;
+            padding: 1rem 0.3rem;
+            margin: 0;
+
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .logo-img{
+            height: 1.5rem;
+        }
+        .nav-item{
+            list-style: none;
+            margin: 0px 2rem;
+        }
+        .nav-item a{
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .nav-item a:hover{
+            color: brown;
+            border-bottom: 4px solid  brown;
+        }
+        .nav-item:first-child{
+            margin-right:auto; /* this pushes the flex-item1(i.e logo) to extreme left*/
+            margin-left: 1.7rem;
+        }
+        .btn-primary{
+            font-size: 1rem;
+            font-family: sans-serif;
+            border: none;
+            outline: none;
+            background-color: rgba(212, 5, 5, 0.39);
+            padding: 5px 20px ;
+            border-radius: 20px;
+            cursor: pointer;
+            color: brown;
+            transition: all 0.6s;
+        }
+        .btn-primary:hover{
+            background-color: rgb(122, 11, 11);
+            color: white;
+            border-radius: 50px;
+        }
+        @media only screen and (max-width:575px) {
+            .nav-list{  
+                flex-direction: column;
+                justify-content: center;
+            }
+            .nav-item{
+                margin-top: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav-list">
+            <li class="nav-item">
+                <img class="logo-img" src="./img/logo.png" alt="logo">
+            </li>
+            <li class="nav-item">
+                <a href="">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="">Services</a>
+            </li>
+            <li class="nav-item">
+                <button class="btn-primary">Donate</button>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

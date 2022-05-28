@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid + Media Query</title>
+    <style>
+        .container
+        {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas: 
+            'navbar navbar navbar navbar'
+            'section section section aside'
+            'footer footer footer footer';
+        }
+        #navbar{
+            grid-area: navbar;
+        }
+        #section{
+            grid-area: section;
+        }
+        #aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+        }
+        @media only screen and (max-width:300px){
+            body{
+                background-color: violet;
+            }
+            .container{
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer';
+            }
+            .nav-item{
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid brown;
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width: 500px){
+            body{
+                background-color: aqua;
+                color: crimson;
+            }
+            
+        }
+        @media only screen and (min-width:500px) and (max-width:800px){
+            body{
+                background-color: yellow;
+                color: salmon;
+            }
+            .container{
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-areas: 
+                'navbar navbar navbar navbar'
+                'section section section section'
+                'aside aside aside aside'
+                'footer footer footer footer';
+            }
+        }
+        @media only screen and (min-width:800px)
+        {
+            body{
+                background-color: seagreen;
+                color: sienna;
+            }
+        }
+        .bdr{
+            border: 2px solid chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="bdr" id='navbar'>
+            <span class="nav-item">Home</span>
+            <span class="nav-item">Services</span>
+            <span class="nav-item">About</span>
+            <span class="nav-item">Contact</span> 
+        </nav>
+        <section class="bdr" id='section'>
+            <h2>Heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam incidunt perspiciatis voluptatum, fuga nesciunt eveniet ratione necessitatibus dolor tempora natus beatae reiciendis doloremque at veniam. Quam beatae doloribus eum ad natus est. Veritatis in non veniam quibusdam quo quaerat obcaecati fugit quod. Aliquid deserunt, eum a veniam eligendi natus. Quos distinctio explicabo praesentium voluptate. Non sequi, voluptatem tenetur numquam vero, esse commodi voluptas eveniet deserunt sed dolorem et placeat sit distinctio quo temporibus consectetur fugiat fugit. Mollitia temporibus eos harum quasi velit nobis blanditiis possimus tempore quo inventore adipisci earum quibusdam nulla commodi beatae, corporis, laborum ullam officia doloremque! Molestiae temporibus, provident est tempora necessitatibus nesciunt quos. Officia fugiat placeat quisquam tempore ab recusandae quaerat quod facilis sint. Earum facilis est esse neque hic repellat, soluta ducimus, quisquam aliquid temporibus voluptas dolorum iure eaque quas illo in, ad commodi! Ratione laboriosam ea illum accusamus deserunt beatae distinctio, reiciendis eveniet qui necessitatibus dolores! Amet corrupti omnis consequatur porro ratione quidem rerum non nisi molestiae fuga, quibusdam temporibus ut aliquam eligendi itaque. Minus, accusantium repellendus earum at itaque magni? Dolor magni iure sit quod excepturi, numquam ex vero accusamus obcaecati laborum deleniti perspiciatis. Et ratione esse nemo, laboriosam doloremque animi. Beatae vitae animi at aut. Sit fugiat quas rerum totam dolorum voluptate facilis. Eaque magni assumenda tempore explicabo impedit saepe, esse ipsum ipsa corrupti illo vero fugit ullam repudiandae vitae id sunt ducimus beatae laboriosam eius ex optio culpa. Repellat, deserunt iste. Officiis laborum, facilis odit est ipsum laudantium doloremque in nesciunt iure harum molestiae sint, itaque dignissimos quisquam iste incidunt? Veniam beatae est incidunt ullam sequi eligendi nesciunt quis enim quas repellendus, praesentium, illum officia voluptas possimus doloribus obcaecati quod eum hic aliquam velit sapiente amet ut. Sed perspiciatis quod omnis delectus iste officiis impedit aliquid voluptatum corrupti dignissimos, fugit amet adipisci reprehenderit corporis dolorum incidunt neque non culpa. Doloremque distinctio iusto quibusdam fugiat, illo nihil ducimus voluptate incidunt. Vero quas, enim quo praesentium ipsa rem expedita voluptatibus possimus dolore eveniet distinctio nisi nostrum inventore sapiente non quos omnis voluptate repellendus. Iusto ab voluptatibus sed. Quidem incidunt soluta reprehenderit velit, dolores maxime eum fugit, mollitia repellendus expedita repellat quo, itaque officiis quasi eos commodi temporibus deserunt? Ipsa laborum facere obcaecati tempora ab eos molestiae sit explicabo blanditiis animi, dolores totam eligendi voluptate ratione incidunt alias asperiores ad, consequuntur odio eveniet soluta officiis voluptatum? Mollitia, facilis consectetur. Facere aliquid sequi eos recusandae officiis provident magnam cumque vitae! Voluptate corrupti optio ab, repudiandae temporibus obcaecati sint nobis illum atque expedita, perspiciatis consequatur saepe repellat accusantium dolore velit quis quas necessitatibus aperiam explicabo accusamus. Sunt, deleniti? Laboriosam fugit delectus possimus reprehenderit quia modi sequi hic rem numquam vel eius sint, impedit mollitia quae autem? Qui impedit excepturi rerum provident labore facilis nesciunt consequuntur mollitia! Quaerat accusantium quibusdam explicabo aspernatur nostrum omnis id, minus ipsum numquam officiis hic dicta blanditiis animi voluptatem soluta sit eligendi. Laborum unde impedit repudiandae dolores ab delectus amet eveniet voluptatem velit distinctio? In, saepe? Dolorum minima numquam modi, ut libero laborum blanditiis. Corrupti ad illum et architecto aspernatur. Necessitatibus natus repellendus, debitis obcaecati dolorum nostrum aliquid iusto consequatur aspernatur corporis assumenda perferendis similique ipsam quod voluptatum. Repellendus dolores quidem sit optio nobis exercitationem impedit quia itaque in? Omnis quibusdam, excepturi nemo voluptate atque facilis consectetur sequi laborum qui autem cumque nisi illum, illo id eveniet reiciendis asperiores obcaecati eaque assumenda error labore, debitis officiis animi quod. Incidunt dignissimos est architecto nesciunt veritatis deleniti corrupti, cumque quod sint porro ipsum unde perspiciatis accusamus modi repellat possimus nemo doloribus. Neque dolorum odio quos mollitia! Eveniet in ducimus cumque magni, neque illum debitis ipsum, rem incidunt numquam nemo praesentium dolor commodi aut minima dolorem nam ea, unde perferendis non! Tempore, iure! Optio suscipit quis facilis, adipisci quaerat sunt veniam reiciendis architecto ipsum porro non sed enim expedita. Nobis neque libero ut dolor eum nihil, ipsum natus! Quasi, quo tempore fuga mollitia quidem voluptate natus aliquid incidunt alias. Repudiandae id sint autem, harum doloremque numquam debitis laborum rem consectetur totam voluptates illum impedit ipsa deleniti, nulla consequatur doloribus maxime et inventore? Placeat, in aliquid! Eius neque ullam a similique voluptatem mollitia totam saepe, dolores iste. Maiores temporibus vero inventore ut fugit ipsam totam earum.</p>
+        </section>
+        <aside class="bdr" id='aside'>
+            <h2>Aside</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, voluptatum asperiores, totam perspiciatis quam deleniti porro dignissimos rem repudiandae cum odit quae, omnis minus cupiditate dolor dolorum? Placeat, ut alias voluptate ipsam soluta distinctio obcaecati error corporis modi fugit corrupti quis ad laboriosam, doloremque sit eum consequuntur adipisci! Corrupti sed quas nam! Illum minima vitae consectetur fuga dicta cumque, quo tempora ipsam asperiores sed veniam non nesciunt laborum velit culpa voluptate mollitia doloremque illo odio provident rerum qui veritatis officia! Tempora quod quae obcaecati porro iusto illum eum ut omnis pariatur non officia, vel numquam provident repudiandae hic, aspernatur eos.</p>
+        </aside>
+        <footer class="bdr" id='footer'>
+            This is footer
+        </footer>
+    </div>
+    
+</body>
+</html>

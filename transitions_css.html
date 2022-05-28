@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        /* All those properties which has continuous values, those properties can be transitioned */
+        #box{
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: orange;
+            justify-content: center;
+            align-items: center;
+            transition: background-color;
+            transition-duration: 2s;
+        }
+        #box:hover{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="" id="box">
+            This is a box
+        </div>
+    </div>
+</body>
+</html>

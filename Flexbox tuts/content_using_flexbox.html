@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox</title>
+    <style>
+        .container
+        {
+            border: 2px solid greenyellow;
+            width: 90vw;
+            /* height: 100vh; */
+            background-color: honeydew;
+            padding: 5px;
+            margin: auto;
+            display:flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .item{
+            width: 200px;
+            /* height:230px; */
+            background-color: lavender;
+            box-shadow: 2px lavenderblush ;
+            margin: 4px;
+        }
+        .box-heading{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            text-align: center;
+            
+            margin-top: 5px;
+        }
+        .box-content{
+            padding: 0px 4px;
+        }
+        p{
+            text-align: justify;
+            padding: 0px 15px;
+        }
+        .more{
+            /* display: inline-block; */
+            height:1.3rem;
+            background-color: lightpink;
+            border: 1px solid green;
+            border-radius: 15px;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            transition: all 0.5s;
+        }
+        .more:hover{
+            background-color: green;
+            border: 1px solid lightpink;
+            width: 70%;
+        }
+        .more a{
+            padding-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1">
+            <div class="box-heading">Item1</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+        <div class="more"><a>Read more</a></div>            
+        </div>
+        <div class="item" id="item2">
+            <div class="box-heading">Item2</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item3">
+            <div class="box-heading">Item3</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item4">
+            <div class="box-heading">Item4</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item5">
+            <div class="box-heading">Item5</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item6">
+            <div class="box-heading">Item6</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item7">
+            <div class="box-heading">Item7</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>
+        </div>
+        <div class="item" id="item8">
+            <div class="box-heading">Item8</div>
+            <div class="box-content">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sint nulla error vel? Alias atque et facilis molestiae possimus vitae voluptatum ut? Aliquam modi ullam 
+                    ex accusamus, iusto pariatur cupiditate?</p>
+            </div>
+            <div class="more"><a>Read more</a></div>            
+        </div>
+    </div>
+</body>
+</html>

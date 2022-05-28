@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <style>
+        .container{
+            width: 90%;
+            margin:auto;
+        }
+        header{
+            margin: auto;
+            border: 2px solid brown;
+            width: 15%;
+        }
+        img{
+            /* img is a inline element */
+            display: block; /*making it block element from inline*/
+            width:35px;
+            margin : auto; /*margin : auto makes any block element to appear at center*/
+        }
+        h3{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0px;
+            text-align: center;
+        }
+
+        /* To make any element inline from block we use display: inline , now it will occupy space equal to the size of the content*/
+        /* To make any element block from inline we use display: block , now it will occupy space equal to width of the screen*/
+        /*  */
+        .box{
+            margin: 4px 0px;
+            background-color: azure;
+            color: navy;
+            border: 1px solid navy;
+            padding: 7px;
+            display: inline-block;
+            width: 30%;
+            box-sizing: border-box;
+        }
+        p{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header class="top">
+        <img src="https://cdn-icons-png.flaticon.com/512/48/48540.png" alt="img">
+        <h3>Welcome to myBlog</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cupiditate, voluptatem atque suscipit maxime quidem aperiam eveniet minima, adipisci saepe temporibus laboriosam porro facere, explicabo rerum dolores ducimus recusandae doloremque. Obcaecati optio nostrum, voluptates officia omnis aliquam quos repellendus ut.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cupiditate, voluptatem atque suscipit maxime quidem aperiam eveniet minima, adipisci saepe temporibus laboriosam porro facere, explicabo rerum dolores ducimus recusandae doloremque. Obcaecati optio nostrum, voluptates officia omnis aliquam quos repellendus ut.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo cupiditate, voluptatem atque suscipit maxime quidem aperiam eveniet minima, adipisci saepe temporibus laboriosam porro facere, explicabo rerum dolores ducimus recusandae doloremque. Obcaecati optio nostrum, voluptates officia omnis aliquam quos repellendus ut.</p>
+        </div>
+    </div>
+</body>
+</html>

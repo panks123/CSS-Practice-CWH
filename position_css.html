@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions in CSS</title>
+    <style>
+        body{
+            height: 3444px;
+        }
+        .container1, .container2{
+            border: 2px solid green;
+            margin: 10px;
+            
+        }
+        .box{
+            border: 2px solid brown;
+            background-color:beige;
+            width: 150px;
+            height: 150px;
+            display: inline-block;
+        }
+        /*CSS positions : static(default), absolute, relative, fixed, sticky*/
+        .container1 #box3{
+            position: relative; /*position : relative - means positions the element relative to its normal position*/
+            /* Now , we can use top bottom, left right properties */
+            top: 30px;
+            left: 34px ;
+        }
+        #box7{
+            position: absolute; /*position : absolute - means positions the element relative to the position of the first parent*/
+            top: 40px;
+            left: 20px;
+        }
+        #box8{
+            position: fixed; /*position : fixed - means positions the element relative to its browser window*/
+            left: 4px;
+            bottom: 5px;
+        }
+        .container1{
+            position: sticky;
+            top: 3px;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    
+    <div class="container2">
+        <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div>
+        <div class="box" id="box7">7</div>
+        <div class="box" id="box8">8</div>
+    </div>
+</body>
+</html>

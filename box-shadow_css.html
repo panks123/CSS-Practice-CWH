@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow property</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card
+        {
+            border: 2px solid brown;
+            margin: 20px;
+            padding: 10px;
+            background-color: bisque;
+            box-shadow: 10px 16px 7px darkslategrey , 13px 18px orange;  /*10px is vertical shadow value and 16px is horizontal shadow value and 7px is the blur-radius value(means how much blurred the box-shadow will be) 
+            Also we can provide multiple box-shadow using comma separated values*/
+            
+        }
+        header h1{
+            text-shadow: 2px 2px orangered, 1px 1px olive;
+            color: orange;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Text shadow property</h1>
+    </header>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem rem ullam totam, labore facilis quibusdam magni ducimus beatae praesentium amet tempore deserunt vitae repudiandae! Numquam explicabo esse repellendus sunt? Tempore, aperiam? Aliquid, commodi fugiat!</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem rem ullam totam, labore facilis quibusdam magni ducimus beatae praesentium amet tempore deserunt vitae repudiandae! Numquam explicabo esse repellendus sunt? Tempore, aperiam? Aliquid, commodi fugiat!</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem rem ullam totam, labore facilis quibusdam magni ducimus beatae praesentium amet tempore deserunt vitae repudiandae! Numquam explicabo esse repellendus sunt? Tempore, aperiam? Aliquid, commodi fugiat!</p>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

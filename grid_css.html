@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            /* After making the display:grid; - the container becomes grid container and whatever next child are present , those
+            becomes grid items
+            */
+            display: grid;
+            /* grid-template-columns: 300px 100px 100px; - This means create three columns ion the container such that the first
+            column is of 300px, 2nd column and 3rd column is of 100, 100px each
+            */
+            /* grid-template-columns: 300px auto 100px;  */
+
+            /* grid-template-columns: 1fr 4fr 1fr; It will divide into 3 columns of ratio (1:4:1)- first one(1 part of total width) 2ndcolumn(4 part of total width) and 3rd column(1-part of column width)  */
+            
+            grid-template-columns: repeat(10, auto ); /*It will create 10 columns, and fill the auto width*/
+            
+        }
+        .item
+        {
+            /* height: 100px;
+            width: 100px; */
+            background-color: aqua;
+            margin: 3px;
+            border: 2px solid seagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-10</div>
+    </div>
+</body>
+</html>

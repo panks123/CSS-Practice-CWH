@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .footer{
+            display: flex;
+            background-color: rgb(38, 38, 61);
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            justify-content: flex-start;
+            
+            align-items: center;
+            color: white;
+            
+            padding: 5px 15px;
+        }
+        
+        #item4{
+            margin-left: auto;
+        }
+        #item3{
+            border-left: 2px solid white;
+            padding-left: 1rem;
+        }
+        /* #item2{
+            margin-right: 10%;
+        }  */
+       
+        #me{
+            width: 25px;
+        }
+        .footer-item{
+            margin: 0px 10px;
+        }
+        .footer-item a{
+            text-decoration: none;
+            margin: 0px 0.2rem;
+        }
+        .footer-item a img{
+            filter: invert(100%);
+            width: 1.1rem;
+        }
+        #me-text{
+            margin: 0px 0.4rem;
+        }
+        @media only screen and (max-width:544px){
+            .footer{
+                flex-direction: column;
+                justify-content: center;
+            }
+            #item4{
+                margin-left: 0;
+            }
+            #item3{
+                border-left: none;
+                padding-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="footer-item" id="item1">
+            <img id="me" src="me1.png" alt="me">
+            <!-- <span id="me-text">Pankaj Kumar</span> -->
+        </div>
+
+        <div class="footer-item" id="item2">Pankaj Kumar</div>
+
+        <div class="footer-item" id="item3">Copyright © 2022 WhatEverNotes</div>
+
+        <div class="footer-item" id="item4">
+            <a href="#" target="_blank">
+                <img src="linkedin.png"></img>
+              </a>
+              <a href="#" target="_blank">
+                <img src="github.png"></img>
+              </a>
+        </div>
+    </div>
+</body>
+</html>
